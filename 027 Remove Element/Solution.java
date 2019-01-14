@@ -10,19 +10,21 @@ When nums[j] equals to the given value, skip this element by incrementing j. As 
 we copy nums[j] to nums[i] and increment both indexes at the same time. Repeat the process until j reaches the end of 
 the array and the new length is i.
 
-public int removeElement(int[] nums, int val) {
-    if (nums == null || nums.length == 0) {
-        return 0;
-    }
-    int len = nums.length;
-    int j = 0;
-    for (int i = 0; i < len; i++) {
-        if (nums[i] != val) {
-            nums[j] = nums[i];
-            j++;
+class Solution {
+    public int removeElement(int[] nums, int val) {
+        if (nums == null || nums.length == 0) {
+            return 0;
         }
-    }
-    return j;
+        int len = nums.length;
+        int j = 0;
+        for (int i = 0; i < len; i++) {
+            if (nums[i] != val) {
+                nums[j] = nums[i];
+                j++;
+            }
+        }
+        return j;
+    }   
 }
 
 Complexity analysis
@@ -47,22 +49,24 @@ This essentially reduces the array's size by 1.
 Note that the last element that was swapped in could be the value you want to remove itself. But don't worry, 
 in the next iteration we will still check this element.
 
-public int removeElement(int[] nums, int val) {
-    if (nums == null || nums.length == 0) {
-        return 0;
-    }
-
-    int len = nums.length;
-    int i = 0;
-    while (i < len) {
-        if (nums[i] == val) {
-            nums[i] = nums[len - 1];
-            len--;
-        } else {
-            i++;
+class Solution {
+    public int removeElement(int[] nums, int val) {
+        if (nums == null || nums.length == 0) {
+            return 0;
         }
+
+        int len = nums.length;
+        int i = 0;
+        while (i < len) {
+            if (nums[i] == val) {
+                nums[i] = nums[len - 1];
+                len--;
+            } else {
+                i++;
+            }
+        }
+        return len;
     }
-    return len;
 }
 
 Complexity analysis
