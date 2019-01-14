@@ -12,3 +12,5 @@ Example 2:
 Input: "cbbd"
 Output: "bb"
 ```
+
+[Solution](https://leetcode.com/problems/longest-palindromic-substring/solution/)
