@@ -13,4 +13,5 @@ Given n will always be valid.
 Follow up:
 
 Could you do this in one pass?
+
 [Solution](https://leetcode.com/problems/remove-nth-node-from-end-of-list/solution/)
