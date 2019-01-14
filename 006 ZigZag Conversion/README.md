@@ -27,3 +27,5 @@ A   L S  I G
 Y A   H R
 P     I
 ```
+
+[Solution](https://leetcode.com/problems/zigzag-conversion/solution/)
