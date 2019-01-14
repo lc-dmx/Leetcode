@@ -20,3 +20,5 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 Follow up:
 
 Coud you solve it without converting the integer to a string?
+
+[Solution](https://leetcode.com/problems/palindrome-number/solution/)
