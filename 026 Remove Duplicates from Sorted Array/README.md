@@ -35,4 +35,5 @@ for (int i = 0; i < len; i++) {
     print(nums[i]);
 }
 ```
+
 [Solution](https://leetcode.com/problems/remove-duplicates-from-sorted-array/solution/)
