@@ -31,3 +31,4 @@ Example 5:
 Input: "{[]}"
 Output: true
 ```
+[Solution](https://leetcode.com/problems/valid-parentheses/solution/)
