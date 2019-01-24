@@ -51,3 +51,5 @@ Note:
 * Only the filled cells need to be validated according to the mentioned rules.
 * The given board contain only digits 1-9 and the character '.'.
 * The given board size is always 9x9.
+
+[Solution](https://leetcode.com/problems/valid-sudoku/solution/)
