@@ -26,3 +26,5 @@ Example 2:
 Input: n = 4, k = 9
 Output: "2314"
 ```
+
+[Explanation](https://leetcode.com/problems/permutation-sequence/discuss/22507/%22Explain-like-I'm-five%22-Java-Solution-in-O(n))
