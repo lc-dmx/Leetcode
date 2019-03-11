@@ -20,5 +20,3 @@ class Solution {
         return result.toString();
     }
 }
-
-[Explanation](https://leetcode.com/problems/permutation-sequence/discuss/22507/%22Explain-like-I'm-five%22-Java-Solution-in-O(n))
