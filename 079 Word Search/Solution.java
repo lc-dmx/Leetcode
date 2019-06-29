@@ -7,6 +7,50 @@ class Solution {
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
                 if (board[i][j] == word.charAt(0)) {
+                    if (check(board, i, j, word, 0)){
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    private boolean check(char[][] board, int i, int j, String word, int k) {
+        if (i < 0 || i >= board.length || j < 0 || j >= board[0].length) {
+            return false;
+        }
+
+        if (board[i][j] != word.charAt(k)) {
+            return false;
+        }
+
+        if (k + 1 == word.length()) {
+            return true;
+        }
+
+        char savedChar = board[i][j];
+        board[i][j] = '-';
+
+        boolean result = check(board, i + 1, j, word, k + 1) ||
+                check(board, i - 1, j, word, k + 1) ||
+                check(board, i, j + 1, word, k + 1) ||
+                check(board, i, j - 1, word, k + 1);
+
+        board[i][j] = savedChar;
+        return result;
+    }
+}
+
+# Solution 2
+class Solution {
+    public boolean exist(char[][] board, String word) {
+        int row = board.length;
+        int col = board[0].length;
+
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                if (board[i][j] == word.charAt(0)) {
                     if (check(board, i, j, word, 0, new boolean[row][col])){
                         return true;
                     }
@@ -47,7 +91,7 @@ class Solution {
     }
 }
 
-# Solution 2
+# Solution 3
 class Solution {
     public boolean exist(char[][] board, String word) {
         int row = board.length;
