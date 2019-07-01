@@ -19,7 +19,7 @@ class Solution {
                 }
             }
             // if right sub array is sorted
-            if (nums[mid] <= nums[hi]) {
+            if (nums[mid] < nums[hi]) {
                 // if target is present in sorted right sub array
                 if(nums[mid] < target && target <= nums[hi]) {
                     lo = mid + 1;
