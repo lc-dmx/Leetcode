@@ -1,3 +1,40 @@
+# Solution 1
+class Solution {
+    public int search(int[] nums, int target) {
+        int lo = 0, hi = nums.length - 1;
+
+        while (lo <= hi) {
+            int mid = lo + (hi - lo) / 2;
+            if (nums[mid] == target) {
+                return mid;
+            }
+
+            // if left sub array is sorted
+            if (nums[lo] <= nums[mid]) {
+                // if target is in the sorted left sub array
+                if (nums[lo] <= target && target < nums[mid]) {
+                    hi = mid - 1;
+                } else {
+                    lo = mid + 1;
+                }
+            }
+            // if right sub array is sorted
+            if (nums[mid] <= nums[hi]) {
+                // if target is present in sorted right sub array
+                if(nums[mid] < target && target <= nums[hi]) {
+                    lo = mid + 1;
+                } else {
+                    hi = mid - 1;
+                }
+            }
+        }
+
+        return -1;
+    }
+
+}
+
+# Solution 2
 class Solution {
     public int search(int[] nums, int target) {
         int length = nums.length;
