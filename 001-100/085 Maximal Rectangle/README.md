@@ -11,3 +11,5 @@ Input:
 ]
 Output: 6
 ```
+
+[Reference](https://blog.csdn.net/zuzhiang/article/details/78136417)
