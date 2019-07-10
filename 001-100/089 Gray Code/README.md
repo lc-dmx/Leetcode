@@ -21,10 +21,11 @@ For example, [0,2,3,1] is also a valid gray code sequence.
 01 - 1
 ```
 Example 2:
-```
+
+
 Input: 0
 Output: [0]
 Explanation: We define the gray code sequence to begin with 0.
              A gray code sequence of n has size = 2<sup>n</sup>, which for n = 0 the size is 2<sup>0</sup> = 1.
              Therefore, for n = 0 the gray code sequence is [0].
-```
+
