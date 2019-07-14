@@ -12,8 +12,6 @@
 3. start -  point to beginning of sub-list to be reversed(itself val unchanged) (0 to n-m swap)
 4. then - point  to the node will be reversed(overall traverse the list)
 
-![图示](https://github.com/lc-dmx/Leetcode/blob/master/001-100/092%20Reverse%20Linked%20List%20II/reverseII.PNG?raw=true)
-
 class Solution {
     public ListNode reverseBetween(ListNode head, int m, int n) {
         ListNode dummy = new ListNode(0);
