@@ -25,7 +25,7 @@ class Solution {
         } else {
             for (int i = 1; i <= 3; i++) {
                 if (s.length() < i) {
-                    break;
+                    return;
                 }
                 int val = Integer.valueOf(s.substring(0, i));
                 //切割出来 01 的时候应判断不合法
