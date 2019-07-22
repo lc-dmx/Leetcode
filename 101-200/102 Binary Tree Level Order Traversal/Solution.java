@@ -1,5 +1,15 @@
 # Solution 1
-Class Solution {
+DFS的过程可以总结为：
+
+1) 将当前层节点的值加入到对应的数组中
+
+2) 先递归处理左子树，再处理右子树
+
+由于我们实现并不知道整个子树的层数，所以我们还需要根据当前的层数去动态增加我们答案的数组数量。
+
+当然这一步的实现也很简单，只要比较一下当前层数和答案数组数量之间的关系就可以。
+
+class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
         helper(root, result, 0);
@@ -12,16 +22,11 @@ Class Solution {
         if (result.size() <= level) {
             result.add(new ArrayList<>());
         }
-        
+
         result.get(level).add(root.val);
 
-        if (root.left != null) {
-            helper(root.left, result, level + 1);
-        }
-
-        if (root.right != null) {
-            helper(root.right, result, level + 1);
-        }
+        helper(root.left, result, level + 1);
+        helper(root.right, result, level + 1);
     }
 }
 
