@@ -1,3 +1,20 @@
+1. 首先要能判断多少个word组成一行：
+这里统计读入的所有words的总长curLen，并需要计算空格的长度。假如已经读入words[0:i]。当curLen + i <=L 且加curLen + 1 + word[i+1].size() > L时，一行结束。
+
+2. 知道一行的所有n个words，以及总长curLen之后要决定空格分配：
+平均空格数：k = (L - curLen) / (n-1)
+前m组每组有空格数k+1：m = (L - curLen) % (n-1)
+
+例子：L = 21，curLen = 14，n = 4
+k = (21 - 14) / (4-1) = 2
+m = (21 - 14) % (4-1)  = 1
+A---B--C--D
+
+3. 特殊情况：
+(a) 最后一行：当读入到第i = words.size()-1 个word时为最后一行。该行k = 1，m = 0
+(b) 一行只有一个word：此时n-1 = 0，计算(L - curLen)/(n-1)会出错。该行k = L-curLen, m = 0
+(c) 当word[i].size() == L时。
+
 class Solution {
     public List<String> fullJustify(String[] words, int maxWidth) {
         List<String> result = new ArrayList<>();
