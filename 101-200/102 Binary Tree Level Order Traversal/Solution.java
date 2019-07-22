@@ -1,4 +1,31 @@
 # Solution 1
+Class Solution {
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        List<List<Integer>> result = new ArrayList<>();
+        helper(root, result, 0);
+        return result;
+    }
+
+    private void helper(TreeNode root, List<List<Integer>> result, int level) {
+        if (root == null) return;
+
+        if (result.size() <= level) {
+            result.add(new ArrayList<>());
+        }
+        
+        result.get(level).add(root.val);
+
+        if (root.left != null) {
+            helper(root.left, result, level + 1);
+        }
+
+        if (root.right != null) {
+            helper(root.right, result, level + 1);
+        }
+    }
+}
+
+# Solution 2
 class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
@@ -31,7 +58,7 @@ class Solution {
     }
 }
 
-# Solution 2
+# Solution 3
 Class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
