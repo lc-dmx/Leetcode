@@ -28,12 +28,11 @@ class Solution {
             fast = fast.next.next;
             slow = slow.next;
         }
-        fast = slow.next;
         last.next = null;
         
         TreeNode root = new TreeNode(slow.val);
         if (head != slow) root.left = sortedListToBST(head);
-        root.right = sortedListToBST(fast);
+        root.right = sortedListToBST(slow.next);
         return root;
     }
 }
