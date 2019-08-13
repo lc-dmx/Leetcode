@@ -12,3 +12,5 @@ Input: [1,null,2,3]
 Output: [3,2,1]
 ```
 Follow up: Recursive solution is trivial, could you do it iteratively?
+
+[Reference](https://blog.csdn.net/LK274857347/article/details/77678464)
