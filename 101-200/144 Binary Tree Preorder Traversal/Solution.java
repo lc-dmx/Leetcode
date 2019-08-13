@@ -12,10 +12,10 @@ class Solution {
             result.add(r.val);
 
             if (r.right != null) {
-                stack.add(r.right);
+                stack.push(r.right);
             }
             if (r.left != null) {
-                stack.add(r.left);
+                stack.push(r.left);
             }
         }
 
