@@ -1,3 +1,4 @@
+# Solution 1
 class Solution {
     public int findKthLargest(int[] nums, int k) {
         return quickSort(0, nums.length - 1, nums, k);
@@ -36,5 +37,44 @@ class Solution {
         int temp = nums[index1];
         nums[index1] = nums[index2];
         nums[index2] = temp;
+    }
+}
+
+# Solution 2
+class Solution {
+    public int findKthLargest(int[] nums, int k) {
+        return quickSort(0, nums.length - 1, nums, nums.length - k + 1);
+    }
+
+    private int quickSort(int begin, int end, int[] array, int k) {
+        int pivot = array[end];
+        int left = begin;
+        int right = end;
+
+        while (true) {
+            while (left < right && array[left] < pivot) {
+                left++;
+            }
+
+            while (left < right && array[right] >= pivot) {
+                right--;
+            }
+
+            if (left == right) {
+                break;
+            }
+
+            swap(array, left, right);
+        }
+
+        swap(array, left, end);
+
+        if (k == left + 1) {
+            return pivot;
+        } else if (k < left + 1) {
+            return quickSort(begin, left - 1, array, k);
+        } else {
+            return quickSort(left + 1, end, array, k);
+        }
     }
 }
