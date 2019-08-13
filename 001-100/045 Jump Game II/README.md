@@ -14,3 +14,5 @@ Explanation: The minimum number of jumps to reach the last index is 2.
 Note:
 
 You can assume that you can always reach the last index.
+
+[Reference](https://blog.csdn.net/MebiuW/article/details/51171153)
