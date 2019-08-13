@@ -15,4 +15,4 @@ Note:
 
 You can assume that you can always reach the last index.
 
-[Reference](https://blog.csdn.net/MebiuW/article/details/51171153)
+[Reference](http://www.cnblogs.com/ganganloveu/p/3761715.html)
