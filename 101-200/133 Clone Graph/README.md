@@ -21,3 +21,5 @@ Note:
 2. The undirected graph is a simple graph, which means no repeated edges and no self-loops in the graph.
 3. Since the graph is undirected, if node p has node q as neighbor, then node q must have node p as neighbor too.
 4. You must return the copy of the given node as a reference to the cloned graph.
+
+[Reference](https://leetcode.com/problems/clone-graph/discuss/42309/Depth-First-Simple-Java-Solution)
