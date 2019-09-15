@@ -16,3 +16,7 @@ Output: 3
 Note:
 1. The length of the given array will not exceed 50,000.
 2. All the numbers in the input array are in the range of 32-bit integer.
+
+[Reference](https://leetcode.com/problems/reverse-pairs/solution/)
+
+[Reference](http://www.voidcn.com/article/p-qvfmxshy-br.html)
