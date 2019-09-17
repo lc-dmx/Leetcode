@@ -17,3 +17,5 @@ return the root of the binary tree [4,5,2,#,#,3,1].
     / \
    3   1  
 ```
+
+[Reference](https://www.cnblogs.com/lightwindy/p/9689864.html)
