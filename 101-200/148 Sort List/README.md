@@ -10,3 +10,5 @@ Example 2:
 Input: -1->5->3->4->0
 Output: -1->0->3->4->5
 ```
+
+[Reference](https://www.cnblogs.com/morethink/p/8452914.html)
