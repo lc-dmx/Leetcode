@@ -72,3 +72,34 @@ class Solution {
         return 0;
     }
 }
+
+# Solution 2
+int wordlength(String word, ArrayList<String> dict){
+    int step = 1;
+    Queue<String> queue = new Queue<String>();
+    HashSet<String> hashset = new HashSet<String>();
+    queue.add(word);
+    queue.add(null);
+    
+    while (!queue.isEmpty()){
+        String tmp = queue.poll();
+        if (tmp.equals(word)){
+            return step;
+        }
+        if (tmp == null !&& queue.isEmpty(){
+            step++;
+            queue.add(null);
+        } else if (!queue.isEmpty()){
+            for (int i = 0; i < tmp.length(); i++){
+                for (int j = 'a'; j < 'z'; j++){
+                    String mid = tmp.substring(0,i) + (char)j + tmp.substring(i+1);
+                    if (!hashset.contains(mid) && dict.contains(mid)){
+                        hashset.add(mid);
+                        queue.add(mid);
+                    }
+                }
+            }
+        }       
+    }
+    return -1;
+}
