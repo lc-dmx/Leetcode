@@ -1,0 +1,18 @@
+sed
+The first is with the p (print) command, and the other is with the d (delete) command.
+The n option with the print command is used to only print lines explicitly indicated by the command.
+For example, sed will output the 10th line of file.txt with each of the commands below:
+
+print/p command
+
+cat file.txt | sed -n '10p'  # > 73%
+delete/d command
+
+cat file.txt | sed '10!d'  # > 73%
+awk
+awk has a built in variable NR that keeps track of file/stream row numbers.
+awk syntax and idioms can be hard to read, so below are three different ways to print line 10 of file.txt file using awk.
+
+cat file.txt | awk 'NR==10'     # > 73%
+cat file.txt | awk 'NR==10{print}'  # > 100%
+cat file.txt | awk '{if(NR==10) print}'  # >73%
